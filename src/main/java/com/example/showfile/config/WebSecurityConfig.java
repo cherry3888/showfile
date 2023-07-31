@@ -15,7 +15,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .csrf().disable()
                 .cors()
                 .and()
-                .headers(headers -> headers.contentTypeOptions(contentTypeOptions -> contentTypeOptions.disable()));
+                .headers(headersConfigurer -> headersConfigurer.contentTypeOptions(contentTypeOptionsConfig -> contentTypeOptionsConfig.disable()));
     }
 
 }
